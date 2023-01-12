@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.down').click(function () {
+			var $input = $(this).parent().find('input');
+			var count = parseInt($input.val()) - 1;
+			count = count < 1 ? 1 : count;
+			$input.val(count);
+			$input.change();
+			return false;
+		});
+		$('.up').click(function () {
+			var $input = $(this).parent().find('input');
+			$input.val(parseInt($input.val()) + 1);
+			$input.change();
+			return false;
+		});
+	});
+</script>
+    
+</head>
+<body>
+    <header>
+        <div class="row_menu">
+            <div class="menu_logo"><a href="#" >LOGO</a></div>
+            <div class="menu_icon">
+            <a href="#" ><img src="img/icons/user.png" alt="user" ></a>
+            <a href="#" ><img src="img/icons/heart.png" alt="heart"></a>
+            <a href="#" ><img src="img/icons/shop.png" alt="shop"></a>
+            </div>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+            
+            <ul class="menu__box"style="text-transform:uppercase">
+              <li><a class="menu__item" href="#">Постельное белье</a></li>
+                    <li><a class="menu__item" href="#">Одежда для дома</a></li>
+                    <li><a class="menu__item" href="#">Одежда для улицы</a></li>
+                    <li><a class="menu__item" href="#">Выход</a></li>
+            </ul>
+          </div>
+    </header>
+ <!-- первый блок с общей фотографией пижамой для девочек -->
+    <div class="content">
+        <div class="wrapper">
+                <div class="general_img" >
+                    <a href="" ><img src="img/1.png" alt="generaly_img"class="general_img"></a>
+                
+                <div class="showing-img" >
+                    <a href="" id="zoomIn"><img src="img/1.png" alt="showing-img-1"class="showing_img" ></a>
+                    <a href="" id="zoomIn"><img src="img/2.jpg" alt="showing-img-2" class="showing_img" ></a>
+                    <a href="" id="zoomIn"><img src="img/3.jpg" alt="showing-img-3" class="showing_img" ></a>
+                    <a href="" id="zoomIn"><img src="img/4.jpg" alt="showing-img-4" class="showing_img" ></a>
+                    <a href="" id="zoomIn"><img src="img/5.jpg" alt="showing-img-5" class="showing_img" ></a>
+                </div>
+                </div>
+        </div>
+        <!-- Описание товара, отзывы, цена, размер товара, добавить в корзину, ссылки на товар-->
+        <div class="description">
+            <div class="clothing_name">
+                <h2>Пижама для девочек</h2>
+                <p class="articul">Арт. 02765/46</p>
+            </div>
+        
+        
+            <div class="reviews">
+                <p class="reviews_text">Отзывы</p>
+                <div class="rating-area">
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5" title="Оценка «5»"></label>	
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4" title="Оценка «4»"></label>    
+                    <input type="radio" id="star-3" name="rating" value="3">
+                    <label for="star-3" title="Оценка «3»"></label>  
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2" title="Оценка «2»"></label>    
+                    <input type="radio" id="star-1" name="rating" value="1">
+                    <label for="star-1" title="Оценка «1»"></label>
+                </div>
+                <div class="snp-topview-comments">
+                    <a href="#"> <p>14 отзывов <strong>&#8250;</strong></p></a>
+                </div>
+            </div>
+
+            <div class="price_tag">
+                <div class="price">
+                    <p id="new_price">800 &#8381;</p>
+                    <p id="old_price">1500 &#8381; </p>&rsaquo;
+                </div>
+                <div class="price_discount">
+                    <div class="price_discount_1"><p>скидка -36%</p></div>
+                    <div class="price_discount_2"><p>акция -20%</p></div>
+                </div>
+                
+            </div> 
+    
+            <div class="clothing_size">
+                <select name="user_profile_color_1" class="user_profile_color_1">
+                    <option value="1">Выбрать размер</option>
+                    <option value="2">Size1</option>
+                    <option value="3">Size2</option>
+                    <option value="4">Size3</option>
+                    <option value="5">size4</option>
+                </select>    
+            </div>
+            <div class="determine_size"><a href="#" >Определить размер</a></div>
+
+            <div class="quantity_goods">
+                <div class="amount">
+                    <span class="down">-</span>
+                    <input type="text" value="1" />
+                    <span class="up">+</span>
+                </div>
+                <button class="add_shopping_cart"><a href="#"class="add_shopping_cart">Добавить в корзину</a></button>
+                <button class="heart">
+                    <a href="#" ><img src="img/icons/like--v1.png" alt="like" class="heart"></a>
+                    </button>
+                
+            </div>
+            <div class="buy"><a href="#" class="buy">Купить в 1 клик</a></div>
+            <hr>
+            <div class="detailed_information">
+                <ul class="detailed_information">
+                    <li><img src="img/icons/tshirt.png" alt="tshirt"><a href="">Описание товара</a></li>
+                    <li><img src="img/icons/clock.png" alt="clock"><a href="">Доставка и возврат</a></li>
+                    <li><img src="img/icons/credit_card.png" alt="credit_card"><a href="">Способы оплаты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_content">
+        <div class="atribut">
+            <a href="#">Посмотреть все стили</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="big-image"><a href=""><img src="img/bc_1.png" ></a></div>
+        <div class="small-images">
+          <div class="small-image" ><a href=""><img src="img/bc_2.png"></a></div>
+          <div class="small-image"><a href=""><img src="img/bc_4.png" ></a></div>
+        </div>
+        <div class="small-images">
+          <div class="small-image"><a href=""><img src="img/bc_3.png"></a></div>
+          <div class="small-image"><a href=""><img src="img/bc_5.png"></a></div>
+        </div>
+      </div> 
+    <div class="footer">
+        <div class="block-3">
+        <div class="customer">
+            <ul><a href="#"><h3>Покупателям</h3></a> 
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Бренды</a></li>
+            </ul>
+        </div>
+        <div class="about_us">
+            <ul><a href="#"><h3>O нас</h3></a> 
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Команда</a></li>
+            </ul>
+        </div>
+    </div>
+            <div class="box">
+                <div><a href="#"><h3>Узнайте первыми о новинках и акциях</h3></a></div>
+                <form>
+                <div class="input-container">	
+                    <input type="mail" required="mail" placeholder="Адрес электронной почты"/>
+                    
+                </div>
+                    <button type="button" class="btn">Подписаться</button>
+            </form>	
+            </div>
+    </div>
+    <dir class="footer_2">
+        
+    </dir>
+</body>
+</html>
